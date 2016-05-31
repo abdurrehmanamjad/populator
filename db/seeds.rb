@@ -1,8 +1,10 @@
 require 'roo'
 
+# NAME OF THE EXCEL FILE WITH EXTENSION PRESENT IN THE ROOT DIRECTORY OF THE PROJECT
 FILE_NAME = '541437551.xls'
 INDEX_TRACKING_ID_CHARGE_DESCRIPTION = [98, 100, 102, 104, 106]
 
+# PERMITTING THE PARAMETERS AT FEDEXBILLING ENTRY CREATION IN DATABASE FOR SECURITY REASONS
 def fed_ex_billing_params(params)
   params.permit(:account_number, :inv_date, :inv_no, :cur_inv_bal, :track_no, :net_charge, :service, :serv_area_code, :rec_zip, :ship_zip)
 end
@@ -48,13 +50,11 @@ excel_file.each_with_index(
 		# SETTING UP THE RES VALUE
 		@fed_ex_billing.res = "Y" if (excel_file.row(index+1)[98] == "Residential" or excel_file.row(index+1)[100] == "Residential" or excel_file.row(index+1)[102] == "Residential" or excel_file.row(index+1)[104] == "Residential" or excel_file.row(index+1)[106] == "Residential")
 
-		# if @fed_ex_billing.save
-		# 	puts 'created'
-		# else
-		# 	puts 'not created'
-		# end
-		#  puts row.inspect
-		# break
+		if @fed_ex_billing.save
+			puts 'created the record in database'
+		else
+			puts 'not created the record for some reason'
+		end
 	end
 end 
 

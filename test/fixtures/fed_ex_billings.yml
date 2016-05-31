@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_number: MyString
+  inv_date: 2016-05-27 02:06:05
+  inv_no: MyString
+  cur_inv_bal: 1.5
+  track_no: MyString
+  net_charge: 1.5
+  service: MyString
+  ship_date: 2016-05-27 02:06:05
+  del_date: 2016-05-27 02:06:05
+  del_time: 2016-05-27 02:06:05
+  serv_area_code: MyString
+  rec_zip: MyString
+  ship_zip: MyString
+  sat: MyString
+  res: MyString
+  del_days: 1
+  request_format: MyString
+  date_time_import: 2016-05-27 02:06:05
+  processed: false
+
+two:
+  account_number: MyString
+  inv_date: 2016-05-27 02:06:05
+  inv_no: MyString
+  cur_inv_bal: 1.5
+  track_no: MyString
+  net_charge: 1.5
+  service: MyString
+  ship_date: 2016-05-27 02:06:05
+  del_date: 2016-05-27 02:06:05
+  del_time: 2016-05-27 02:06:05
+  serv_area_code: MyString
+  rec_zip: MyString
+  ship_zip: MyString
+  sat: MyString
+  res: MyString
+  del_days: 1
+  request_format: MyString
+  date_time_import: 2016-05-27 02:06:05
+  processed: false

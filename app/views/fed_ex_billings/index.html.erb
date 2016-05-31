@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fed Ex Billings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Account number</th>
+      <th>Inv date</th>
+      <th>Inv no</th>
+      <th>Cur inv bal</th>
+      <th>Track no</th>
+      <th>Net charge</th>
+      <th>Service</th>
+      <th>Ship date</th>
+      <th>Del date</th>
+      <th>Del time</th>
+      <th>Serv area code</th>
+      <th>Rec zip</th>
+      <th>Ship zip</th>
+      <th>Sat</th>
+      <th>Res</th>
+      <th>Del days</th>
+      <th>Request format</th>
+      <th>Date time import</th>
+      <th>Processed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fed_ex_billings.each do |fed_ex_billing| %>
+      <tr>
+        <td><%= fed_ex_billing.account_number %></td>
+        <td><%= fed_ex_billing.inv_date %></td>
+        <td><%= fed_ex_billing.inv_no %></td>
+        <td><%= fed_ex_billing.cur_inv_bal %></td>
+        <td><%= fed_ex_billing.track_no %></td>
+        <td><%= fed_ex_billing.net_charge %></td>
+        <td><%= fed_ex_billing.service %></td>
+        <td><%= fed_ex_billing.ship_date %></td>
+        <td><%= fed_ex_billing.del_date %></td>
+        <td><%= fed_ex_billing.del_time %></td>
+        <td><%= fed_ex_billing.serv_area_code %></td>
+        <td><%= fed_ex_billing.rec_zip %></td>
+        <td><%= fed_ex_billing.ship_zip %></td>
+        <td><%= fed_ex_billing.sat %></td>
+        <td><%= fed_ex_billing.res %></td>
+        <td><%= fed_ex_billing.del_days %></td>
+        <td><%= fed_ex_billing.request_format %></td>
+        <td><%= fed_ex_billing.date_time_import %></td>
+        <td><%= fed_ex_billing.processed %></td>
+        <td><%= link_to 'Show', fed_ex_billing %></td>
+        <td><%= link_to 'Edit', edit_fed_ex_billing_path(fed_ex_billing) %></td>
+        <td><%= link_to 'Destroy', fed_ex_billing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fed ex billing', new_fed_ex_billing_path %>

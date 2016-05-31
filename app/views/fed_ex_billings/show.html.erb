@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account number:</strong>
+  <%= @fed_ex_billing.account_number %>
+</p>
+
+<p>
+  <strong>Inv date:</strong>
+  <%= @fed_ex_billing.inv_date %>
+</p>
+
+<p>
+  <strong>Inv no:</strong>
+  <%= @fed_ex_billing.inv_no %>
+</p>
+
+<p>
+  <strong>Cur inv bal:</strong>
+  <%= @fed_ex_billing.cur_inv_bal %>
+</p>
+
+<p>
+  <strong>Track no:</strong>
+  <%= @fed_ex_billing.track_no %>
+</p>
+
+<p>
+  <strong>Net charge:</strong>
+  <%= @fed_ex_billing.net_charge %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @fed_ex_billing.service %>
+</p>
+
+<p>
+  <strong>Ship date:</strong>
+  <%= @fed_ex_billing.ship_date %>
+</p>
+
+<p>
+  <strong>Del date:</strong>
+  <%= @fed_ex_billing.del_date %>
+</p>
+
+<p>
+  <strong>Del time:</strong>
+  <%= @fed_ex_billing.del_time %>
+</p>
+
+<p>
+  <strong>Serv area code:</strong>
+  <%= @fed_ex_billing.serv_area_code %>
+</p>
+
+<p>
+  <strong>Rec zip:</strong>
+  <%= @fed_ex_billing.rec_zip %>
+</p>
+
+<p>
+  <strong>Ship zip:</strong>
+  <%= @fed_ex_billing.ship_zip %>
+</p>
+
+<p>
+  <strong>Sat:</strong>
+  <%= @fed_ex_billing.sat %>
+</p>
+
+<p>
+  <strong>Res:</strong>
+  <%= @fed_ex_billing.res %>
+</p>
+
+<p>
+  <strong>Del days:</strong>
+  <%= @fed_ex_billing.del_days %>
+</p>
+
+<p>
+  <strong>Request format:</strong>
+  <%= @fed_ex_billing.request_format %>
+</p>
+
+<p>
+  <strong>Date time import:</strong>
+  <%= @fed_ex_billing.date_time_import %>
+</p>
+
+<p>
+  <strong>Processed:</strong>
+  <%= @fed_ex_billing.processed %>
+</p>
+
+<%= link_to 'Edit', edit_fed_ex_billing_path(@fed_ex_billing) %> |
+<%= link_to 'Back', fed_ex_billings_path %>

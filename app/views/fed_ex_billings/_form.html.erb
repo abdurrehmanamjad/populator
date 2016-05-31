@@ -1,0 +1,93 @@
+<%= form_for(@fed_ex_billing) do |f| %>
+  <% if @fed_ex_billing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fed_ex_billing.errors.count, "error") %> prohibited this fed_ex_billing from being saved:</h2>
+
+      <ul>
+      <% @fed_ex_billing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :account_number %><br>
+    <%= f.text_field :account_number %>
+  </div>
+  <div class="field">
+    <%= f.label :inv_date %><br>
+    <%= f.datetime_select :inv_date %>
+  </div>
+  <div class="field">
+    <%= f.label :inv_no %><br>
+    <%= f.text_field :inv_no %>
+  </div>
+  <div class="field">
+    <%= f.label :cur_inv_bal %><br>
+    <%= f.text_field :cur_inv_bal %>
+  </div>
+  <div class="field">
+    <%= f.label :track_no %><br>
+    <%= f.text_field :track_no %>
+  </div>
+  <div class="field">
+    <%= f.label :net_charge %><br>
+    <%= f.text_field :net_charge %>
+  </div>
+  <div class="field">
+    <%= f.label :service %><br>
+    <%= f.text_field :service %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_date %><br>
+    <%= f.datetime_select :ship_date %>
+  </div>
+  <div class="field">
+    <%= f.label :del_date %><br>
+    <%= f.datetime_select :del_date %>
+  </div>
+  <div class="field">
+    <%= f.label :del_time %><br>
+    <%= f.datetime_select :del_time %>
+  </div>
+  <div class="field">
+    <%= f.label :serv_area_code %><br>
+    <%= f.text_field :serv_area_code %>
+  </div>
+  <div class="field">
+    <%= f.label :rec_zip %><br>
+    <%= f.text_field :rec_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_zip %><br>
+    <%= f.text_field :ship_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :sat %><br>
+    <%= f.text_field :sat %>
+  </div>
+  <div class="field">
+    <%= f.label :res %><br>
+    <%= f.text_field :res %>
+  </div>
+  <div class="field">
+    <%= f.label :del_days %><br>
+    <%= f.number_field :del_days %>
+  </div>
+  <div class="field">
+    <%= f.label :request_format %><br>
+    <%= f.text_field :request_format %>
+  </div>
+  <div class="field">
+    <%= f.label :date_time_import %><br>
+    <%= f.datetime_select :date_time_import %>
+  </div>
+  <div class="field">
+    <%= f.label :processed %><br>
+    <%= f.check_box :processed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

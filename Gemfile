@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'roo'
 # Library to extend support of Roo to open XLS files
 gem 'roo-xls'
+# Gem for mysql adapter
+gem 'mysql2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
